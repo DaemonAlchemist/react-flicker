@@ -3,9 +3,9 @@
       "target": "es5",
       "module": "commonjs",
       "declaration": true,
-      "outDir": "./dist",
       "strict": true,
       "jsx": "react",
-      "lib": ["es2015", "es2017", "dom"]
+      "lib": ["es2015", "es2017", "dom"],
+      "outDir": "../dist/lib"
     }
   }

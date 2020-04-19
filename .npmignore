@@ -1,4 +1,9 @@
+_templates
+.storybook
 lib
 node_modules
-jest.config.jest
+stories
+.npmignore
+jest.config.js
 tsconfig.json
+tslint.json

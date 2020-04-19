@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "build": "tsc",
+    "build": "tsc --project ./lib",
     "new-tag": "git push && git push origin --tags && npm publish",
     "major": "npm version major && npm run new-tag",
     "minor": "npm version minor && npm run new-tag",
@@ -16,7 +16,9 @@
     "patch-clean": "npm install && npm run patch && rm -rf node_modules",
     "check-dependencies": "dependency-check ./package.json && dependency-check ./package.json --unused",
     "check": "ncu --packageFile package.json",
-    "evergreen": "ncu -ua --packageFile package.json"
+    "evergreen": "ncu -ua --packageFile package.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -33,14 +35,30 @@
   },
   "homepage": "https://github.com/DaemonAlchemist/ts-module-template#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.0",
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-info": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "@types/jest": "^24.9.1",
+    "@types/react": "^16.9.23",
+    "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
+    "babel-loader": "^8.0.6",
     "dependency-check": "^3.3.0",
+    "hygen": "^5.0.3",
     "jest": "^24.1.0",
     "npm-check-updates": "^2.15.0",
+    "react-docgen-typescript-loader": "^3.6.0",
     "ts-jest": "^23.10.5",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.3.1"
   },
   "dependencies": {
+    "react": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-useinterval": "^1.0.1",
+    "redux": "^4.0.5"
   }
 }
