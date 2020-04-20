@@ -1,6 +1,6 @@
 {
   "name": "react-flicker",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A more annoying substitute for the deprecated blink tag",
   "main": "dist/index.js",
   "scripts": {
