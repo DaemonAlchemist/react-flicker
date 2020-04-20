@@ -1,6 +1,6 @@
 _templates
 .storybook
-lib
+./lib
 node_modules
 stories
 .npmignore
