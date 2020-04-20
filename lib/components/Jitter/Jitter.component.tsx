@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { range } from 'ts-functional';
 import { useJumpAround } from '../../util/util';
 import { CommonProps } from "../../util/util.types";
 
@@ -14,13 +13,10 @@ export const Jitter = (props:CommonProps) => {
         count: props.count ? props.count * 2 : 2,
     });
     
-    const [arr, setArr] = React.useState<number[]>(range(1, props.count || 1));
-    React.useEffect(() => {
-        setArr(range(1, props.count || 1));
-    }, [props.count]);
-
+    let arr:number[] = [];
+    for(let i:number = 0; i<(props.count ? props.count : 1); i++) {arr.push(0);}
     return <span style={{position: "relative"}}>
-        {arr.map((_:any, index:number) => 
+        <>{arr.map((_:any, index:number) => 
             <span
                 key={index}
                 style={{
@@ -32,7 +28,7 @@ export const Jitter = (props:CommonProps) => {
             >
                 {props.children}
             </span>
-        )}
+        )}</>
         <span style={{visibility: "hidden"}}>{props.children}</span>
     </span>;
 }

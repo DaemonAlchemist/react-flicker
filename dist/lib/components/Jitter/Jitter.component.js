@@ -12,7 +12,6 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var ts_functional_1 = require("ts-functional");
 var util_1 = require("../../util/util");
 exports.Jitter = function (props) {
     var curValues = util_1.useJumpAround(__assign(__assign({
@@ -20,18 +19,18 @@ exports.Jitter = function (props) {
         jumpChange: [-6.0, 6.0],
         jumpChangeFreq: 0.1,
     }, props), { count: props.count ? props.count * 2 : 2 }));
-    var _a = React.useState(ts_functional_1.range(1, props.count || 1)), arr = _a[0], setArr = _a[1];
-    React.useEffect(function () {
-        setArr(ts_functional_1.range(1, props.count || 1));
-    }, [props.count]);
+    var arr = [];
+    for (var i = 0; i < (props.count ? props.count : 1); i++) {
+        arr.push(0);
+    }
     return React.createElement("span", { style: { position: "relative" } },
-        arr.map(function (_, index) {
+        React.createElement(React.Fragment, null, arr.map(function (_, index) {
             return React.createElement("span", { key: index, style: {
                     position: "absolute",
                     left: curValues[index * 2] + "px",
                     top: curValues[index * 2 + 1] + "px",
                     whiteSpace: "nowrap",
                 } }, props.children);
-        }),
+        })),
         React.createElement("span", { style: { visibility: "hidden" } }, props.children));
 };
