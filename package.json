@@ -1,12 +1,12 @@
 {
-  "name": "ts-module-template",
+  "name": "react-flicker",
   "version": "0.0.0",
-  "description": "A template for creating TypeScript npm modules",
+  "description": "A more annoying substitute for the deprecated blink tag",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "build": "tsc --project ./lib",
+    "build": "tsc && rm -rf ./dist/stories",
     "new-tag": "git push && git push origin --tags && npm publish",
     "major": "npm version major && npm run new-tag",
     "minor": "npm version minor && npm run new-tag",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaemonAlchemist/ts-module-template.git"
+    "url": "git+https://github.com/DaemonAlchemist/react-flicker.git"
   },
   "keywords": [
     "TypeScript",
@@ -31,9 +31,9 @@
   "author": "Andrew Wittrock",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DaemonAlchemist/ts-module-template/issues"
+    "url": "https://github.com/DaemonAlchemist/react-flicker/issues"
   },
-  "homepage": "https://github.com/DaemonAlchemist/ts-module-template#readme",
+  "homepage": "https://github.com/DaemonAlchemist/react-flicker#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@storybook/addon-actions": "^5.3.14",
