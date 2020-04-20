@@ -1,24 +1,24 @@
 import { Welcome } from '@storybook/react/demo';
 import * as React from 'react';
 import { Flicker } from "../lib/components/Flicker";
-import { IFlickerComponentProps } from '../lib/components/Flicker/Flicker';
+import { ISubComponentProps } from "../lib/util/util.d";
 
 export default {
   title: 'Flicker',
   component: Welcome,
 };
 
-const FlickerColor = (props:IFlickerComponentProps) =>
-  <span style={{color: `rgb(${props.opacities[0] * 255}, ${props.opacities[1] * 255}, ${props.opacities[2] * 255})`}}>
+const FlickerColor = (props:ISubComponentProps) =>
+  <span style={{color: `rgb(${props.values[0] * 255}, ${props.values[1] * 255}, ${props.values[2] * 255})`}}>
     {props.children}
   </span>;
 
 
 
-export const Default = () => <Flicker>Flicker Default</Flicker>;
-export const Slow = () => <Flicker interval={500}>Flicker Slow</Flicker>;
-export const HighOpacity = () => <Flicker opacity={[0.5, 1.0]}>High Opacity</Flicker>;
-export const LowOpacity = () => <Flicker opacity={[0.0, 0.5]}>Low Opacity</Flicker>;
-export const FadeOut = () => <Flicker smoothChange={[-0.05, -0.05]}>Fade Out</Flicker>;
-export const FadeIn = () => <Flicker smoothChange={[0.05, 0.05]} jumpChange={[-1.0, -1.0]}>Fade In</Flicker>;
-export const CustomRenderer = () => <Flicker count={3} Component={FlickerColor}>Custom Renderer</Flicker>;
+export const Default = () => <>This is a <Flicker>Flicker Default</Flicker> example</>;
+export const Slow = () => <>This is a <Flicker interval={500}>Flicker Slow</Flicker> example</>;
+export const HighOpacity = () => <>This is a <Flicker limits={[0.5, 1.0]}>High Opacity</Flicker> example</>;
+export const LowOpacity = () => <>This is a <Flicker limits={[0.0, 0.5]}>Low Opacity</Flicker> example</>;
+export const FadeOut = () => <>This is a <Flicker smoothChange={[-0.05, -0.05]}>Fade Out</Flicker> example</>;
+export const FadeIn = () => <>This is a <Flicker smoothChange={[0.05, 0.05]} jumpChange={[-1.0, -1.0]}>Fade In</Flicker> example</>;
+export const CustomRenderer = () => <>This is a <Flicker count={3} Component={FlickerColor}>Custom Renderer</Flicker> example</>;
