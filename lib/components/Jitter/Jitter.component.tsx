@@ -15,7 +15,7 @@ export const Jitter = (props:CommonProps) => {
     
     let arr:number[] = [];
     for(let i:number = 0; i<(props.count ? props.count : 1); i++) {arr.push(0);}
-    return <span style={{position: "relative"}}>
+    return <span style={{position: "relative", lineHeight: "1"}}>
         <>{arr.map((_:any, index:number) => 
             <span
                 key={index}

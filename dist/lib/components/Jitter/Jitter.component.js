@@ -23,7 +23,7 @@ exports.Jitter = function (props) {
     for (var i = 0; i < (props.count ? props.count : 1); i++) {
         arr.push(0);
     }
-    return React.createElement("span", { style: { position: "relative" } },
+    return React.createElement("span", { style: { position: "relative", lineHeight: "1" } },
         React.createElement(React.Fragment, null, arr.map(function (_, index) {
             return React.createElement("span", { key: index, style: {
                     position: "absolute",
