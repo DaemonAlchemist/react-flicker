@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { IJumpAroundProps } from './util.d';
+import { IJumpAroundBaseProps } from '../components/JumpAround/JumpAround.d';
 import * as useInterval from 'react-useinterval';
 
 export const useValueArray = (count:number) => React.useState<number[]>(new Array(count).fill(1.0));
 
 export const range = (min:number, max:number) => Math.random() * (max - min) + min;
 
-export const useJumpAround = (props:IJumpAroundProps) => {
+export const useJumpAround = (props:IJumpAroundBaseProps) => {
     const defaults = {
         limits: [0.0, 1.0],
         smoothChange: [-0.5, 0.5],
-        jumpChange: [1.0, 1.0],
+        jumpChange: [-1.0, 1.0],
         jumpChangeFreq: 0.05,
         interval: 50,
         count: 1,

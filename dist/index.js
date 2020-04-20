@@ -4,3 +4,7 @@ var Flicker_1 = require("./lib/components/Flicker");
 exports.Flicker = Flicker_1.Flicker;
 var Jitter_1 = require("./lib/components/Jitter");
 exports.Jitter = Jitter_1.Jitter;
+var JumpAround_1 = require("./lib/components/JumpAround");
+exports.JumpAround = JumpAround_1.JumpAround;
+var util_1 = require("./lib/util/util");
+exports.useJumpAround = util_1.useJumpAround;

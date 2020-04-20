@@ -1,4 +1,3 @@
 /// <reference types="react" />
-import { ICommonProps } from "../../util/util.d";
 import './Flicker.less';
-export declare const Flicker: (props: ICommonProps) => JSX.Element;
+export declare const Flicker: (props: Pick<any, string | number | symbol>) => JSX.Element;

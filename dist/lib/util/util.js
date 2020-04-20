@@ -19,7 +19,7 @@ exports.useJumpAround = function (props) {
     var defaults = {
         limits: [0.0, 1.0],
         smoothChange: [-0.5, 0.5],
-        jumpChange: [1.0, 1.0],
+        jumpChange: [-1.0, 1.0],
         jumpChangeFreq: 0.05,
         interval: 50,
         count: 1,

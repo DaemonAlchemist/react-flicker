@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { range } from 'ts-functional';
 import { useJumpAround } from '../../util/util';
-import { ICommonProps } from "../../util/util.d";
+import { CommonProps } from "../../util/util.d";
 import './Jitter.less';
 
-export const Jitter = (props:ICommonProps) => {
+export const Jitter = (props:CommonProps) => {
     const curValues = useJumpAround({
         ...{
             limits: [-3, 3],
