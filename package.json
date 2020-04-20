@@ -6,7 +6,11 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "build": "tsc && rm -rf ./dist/stories",
+    "build": "tsc && rm -rf ./dist/stories && npm run cp",
+    "cp": "npm run cpFlicker && npm run cpJitter && npm run cpJumpAround",
+    "cpFlicker": "cp lib/components/Flicker/Flicker.d.ts dist/lib/components/Flicker/Flicker.d.ts",
+    "cpJitter": "cp lib/components/Jitter/Jitter.d.ts dist/lib/components/Jitter/Jitter.d.ts",
+    "cpJumpAround": "cp lib/components/JumpAround/JumpAround.d.ts dist/lib/components/JumpAround/JumpAround.d.ts",
     "new-tag": "git push && git push origin --tags && npm publish",
     "major": "npm version major && npm run new-tag",
     "minor": "npm version minor && npm run new-tag",
