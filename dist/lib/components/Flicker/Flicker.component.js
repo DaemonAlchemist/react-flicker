@@ -12,7 +12,6 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("./Flicker.less");
 var JumpAround_component_1 = require("../JumpAround/JumpAround.component");
 exports.Flicker = function (props) {
     var Component = function (p) { return React.createElement("span", { style: { opacity: p.values[0] } }, p.children); };

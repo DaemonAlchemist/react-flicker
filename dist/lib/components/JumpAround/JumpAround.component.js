@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("./JumpAround.less");
 var util_1 = require("../../util/util");
 exports.JumpAround = function (props) {
     var Component = props.Component;

@@ -14,7 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var ts_functional_1 = require("ts-functional");
 var util_1 = require("../../util/util");
-require("./Jitter.less");
 exports.Jitter = function (props) {
     var curValues = util_1.useJumpAround(__assign(__assign({
         limits: [-3, 3],
