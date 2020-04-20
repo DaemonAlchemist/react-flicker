@@ -1,3 +1,4 @@
+import {IJumpAroundProps} from "../components/JumpAround/JumpAround.d";
 
 export declare type CommonProps = Omit<IJumpAroundProps, 'Component'>;
 

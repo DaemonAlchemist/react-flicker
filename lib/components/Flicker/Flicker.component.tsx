@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CommonProps, ISubComponentProps } from "../../util/util.d";
+import { CommonProps, ISubComponentProps } from "../../util/util.types";
 import { JumpAround } from '../JumpAround/JumpAround.component';
 
 export const Flicker = (props:CommonProps) => {

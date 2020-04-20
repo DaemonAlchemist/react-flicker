@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { range } from 'ts-functional';
 import { useJumpAround } from '../../util/util';
-import { CommonProps } from "../../util/util.d";
+import { CommonProps } from "../../util/util.types";
 
 export const Jitter = (props:CommonProps) => {
     const curValues = useJumpAround({

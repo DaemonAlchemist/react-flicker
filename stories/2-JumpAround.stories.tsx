@@ -1,7 +1,7 @@
 import { Welcome } from '@storybook/react/demo';
 import * as React from 'react';
 import { JumpAround } from '../lib/components/JumpAround/JumpAround.component';
-import { ISubComponentProps } from "../lib/util/util.d";
+import { ISubComponentProps } from "../lib/util/util.types.d";
 
 export default {
   title: 'JumpAround',

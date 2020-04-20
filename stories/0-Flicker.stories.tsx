@@ -1,7 +1,6 @@
 import { Welcome } from '@storybook/react/demo';
 import * as React from 'react';
 import { Flicker } from "../lib/components/Flicker";
-import { ISubComponentProps } from "../lib/util/util.d";
 
 export default {
   title: 'Flicker',
