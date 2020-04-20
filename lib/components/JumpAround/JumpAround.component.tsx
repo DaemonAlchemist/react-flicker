@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {IJumpAroundProps} from "./JumpAround.d";
-import './JumpAround.less';
 import { useJumpAround } from '../../util/util';
 
 export const JumpAround = (props:IJumpAroundProps) => {
