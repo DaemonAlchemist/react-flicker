@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Blink_1 = require("./lib/components/Blink");
+exports.Blink = Blink_1.Blink;
 var Flicker_1 = require("./lib/components/Flicker");
 exports.Flicker = Flicker_1.Flicker;
 var Jitter_1 = require("./lib/components/Jitter");

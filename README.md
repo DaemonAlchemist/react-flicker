@@ -8,6 +8,7 @@
     - `Flicker`:  Causes elements to flicker in and out randomly.
     - `Jitter`:  Causes elements to move about randomly.
     - `JumpAround`:  Wrapper element that allows for custom renderers.
+    - `Blink`:  The standard blink tag for old-times sake.
 - Does not affect the flow of the flickering or jittering elements.  They remain in the flow of the document and don't cause other elements to jump around when their position or opacity changes.
 - Composable - `Flicker`, `Jitter`, and `JumpAround` can be nested to combine effects for maximum annoyance.
 
@@ -81,6 +82,13 @@ This is the wrapper component that produces new random values each tick.  Pass i
 - `interval?:number` - The number of milliseconds between ticks.  default: 50
 - `count?:number` - The number of random values to produce.  default: 1
 - `Component:(props:{values:number[], children:any})` - The component to render.  `values` is the list of random values produced each tick by the JumpAround wrapper.  The number of values your component uses needs to match the `count` prop passed into the JumpAround container.
+
+### `Blink` Component
+
+This is a standard blink tag with customization durations.
+
+- `onDuration:number` - The number of microseconds the content will be visible.
+- `offDuration:number` - The number of microseconds the content will be invisible.
 
 ### `useJumpAround: (props:IJumpAroundBaseProps) => number[]`
 
